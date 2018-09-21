@@ -66,11 +66,13 @@ Histograms are easy to implement, and because they're so essential to HEP analys
 \vspace{0.5 cm}
 \textcolor{darkblue}{Is there a downside to creating new histogram packages?}
 
+\Large
 \vspace{0.2 cm}
 \begin{center}
 \uncover<2->{Interoperability?}
 \end{center}
 
+\large
 \vspace{0.2 cm}
 \uncover<3->{If Alice uses ROOT, Bob uses Yoda, Claire uses AIDA, and Donald uses Numpy, how are they going to collaborate on analysis?}
 \end{columns}
@@ -86,7 +88,7 @@ As long as we're talking about a handful of standards, we can synchronize them.
 \small
 \vspace{-0.5 cm}
 \begin{minted}{python}
-import uproot
+import uproot  # >= 3.0.2
 import numpy
 f = uproot.recreate("some.root")
 f["myhist"] = numpy.histogram(
@@ -105,6 +107,29 @@ h.Draw()
 \large
 Pratyush Das's histogram-writing feature $+$ a straightforward Numpy translation.
 \end{frame}
+
+\begin{frame}{Commonality}
+\large
+\vspace{0.5 cm}
+All histograms have
+\begin{itemize}
+\item A way of describing edges (regular numbins/low/high or irregular edges)
+\item Number of entries in each bin, possibly weighted
+\end{itemize}
+
+\vspace{0.5 cm}
+Some histograms have
+\begin{itemize}
+\item Weighted bin errors (\mintinline{python}{sumw2})
+\item Global number of entries, mean, standard deviation, other statistics\ldots
+\item Titles, labels, metadata\ldots
+\item Plotting options, overlay functions\ldots
+\end{itemize}
+
+\vspace{0.5 cm}
+Translations among standards may be lossy in the optional features, but not in the essential features.
+\end{frame}
+
 
 
 \end{document}
