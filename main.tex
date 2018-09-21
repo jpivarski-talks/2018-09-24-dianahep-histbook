@@ -59,31 +59,36 @@
 \begin{frame}{Histogramming in Python}
 \scriptsize
 \vspace{0.25 cm}
-\begin{tabular}{c l c p{2.5 cm} p{1.5 cm} p{4 cm}}
+\begin{columns}
+\column{1.1\linewidth}
+\begin{tabular}{c l c p{2.5 cm} p{2 cm} p{4 cm}}
 pip? & name & last release & interface style & depends on & integrates with \\\hline
-$\surd$ & \href{https://pypi.python.org/pypi/histogram}{\textcolor{blue}{histogram}} & 2011 & conventional-HEP & Numpy & Matplotlib, HDF5 \\
-$\surd$ & \href{https://pypi.python.org/pypi/pyhistogram}{\textcolor{blue}{pyhistogram}} & 2014 & conventional-HEP & Numpy & Matplotlib, datetime \\
-$\surd$ & \href{https://pypi.python.org/pypi/histogramy}{\textcolor{blue}{histogramy}} & & & & \\
-$\surd$ & \href{https://pypi.python.org/pypi/pypeaks}{\textcolor{blue}{pypeaks}} & & & & \\
-$\surd$ & \href{https://pypi.python.org/pypi/SimpleHist}{\textcolor{blue}{SimpleHist}} & & & & \\
-$\surd$ & \href{https://pypi.python.org/pypi/hierogram}{\textcolor{blue}{hierogram}} & & & & \\
-$\surd$ & \href{https://pypi.python.org/pypi/histo}{\textcolor{blue}{histo}} & & & & \\
-$\surd$ & \href{https://pypi.python.org/pypi/python-metrics}{\textcolor{blue}{python-metrics}} & & & & \\
-$\surd$ & \href{https://pypi.python.org/pypi/statscounter}{\textcolor{blue}{statscounter}} & & & & \\
-$\surd$ & \href{https://pypi.python.org/pypi/multihist}{\textcolor{blue}{multihist}} & & & & \\
-$\surd$ & \href{https://pypi.python.org/pypi/vaex}{\textcolor{blue}{vaex}} & & & & \\
-$\surd$ & \href{https://pypi.python.org/pypi/datagram}{\textcolor{blue}{datagram}} & & & & \\
-$\surd$ & \href{https://pypi.python.org/pypi/hdrhistogram}{\textcolor{blue}{hdrhistogram}} & & & & \\
-$\surd$ & \href{http://www.ifh.de/~middell/dashi/index.html}{\textcolor{blue}{dashi}} & & & & \\
-$\surd$ & \href{https://pypi.python.org/pypi/physt}{\textcolor{blue}{physt}} & & & & \\
-$\surd$ & \href{https://github.com/ibab/matplotlib-hep}{\textcolor{blue}{matplotlib-hep}} & & & & \\
-& \href{https://github.com/theodoregoetz/histogram}{\textcolor{blue}{theodoregoetz}} & & & & \\
-$\surd$ & \href{https://pypi.org/project/paida}{\textcolor{blue}{paida}} & & & \\
-$\surd$ & \href{https://pypi.org/project/rootpy}{\textcolor{blue}{rootpy}} & & & & \\
-& \href{https://pypi.org/project/root_numpy}{\textcolor{blue}{root\_numpy}} & & & & \\
-& \href{https://yoda.hepforge.org/pydoc}{\textcolor{blue}{YODA}} & & & & \\
-& \href{https://root.cern.ch/pyroot}{\textcolor{blue}{PyROOT}} & & & & \\
+& \href{https://root.cern.ch/pyroot}{\textcolor{blue}{PyROOT}} & 2018 & conventional-HEP & ROOT & numpy \\
+& \href{https://yoda.hepforge.org/pydoc}{\textcolor{blue}{YODA}} & 2018 & conventional-HEP & compiled & matplotlib, yaml \\
+$\surd$ & \href{https://pypi.python.org/pypi/physt}{\textcolor{blue}{physt}} & 2018 & data science + HEP & numpy & dask, matplotlib, folium, vega, xarray, protobuf, pandas \\
+$\surd$ & \href{https://pypi.org/project/rootpy}{\textcolor{blue}{rootpy}} & 2017 & conventional-HEP & ROOT & pytables, matplotlib, stats \\
+$\surd$ & \href{https://vaex.io}{\textcolor{blue}{vaex}} & 2017 & big data GUI, fast heatmaps & many packages! & Jupyter, matplotlib, HDF5, pandas, C++ \\
+$\surd$ & \href{https://pypi.python.org/pypi/hdrhistogram}{\textcolor{blue}{hdrhistogram}} & 2017 & high dynamic range & compiled & Java, C++ \\
+$\surd$ & \href{https://pypi.python.org/pypi/multihist}{\textcolor{blue}{multihist}} & 2017 & Numpy wrapper & numpy & Matplotlib \\
+$\surd$ & \href{https://github.com/ibab/matplotlib-hep}{\textcolor{blue}{matplotlib-hep}} & 2016 & conventional-HEP & matplotlib & numpy, scipy \\
+$\surd$ & \href{https://pypi.python.org/pypi/pyhistogram}{\textcolor{blue}{pyhistogram}} & 2014 & conventional-HEP & numpy & matplotlib, datetime \\
+$\surd$ & \href{https://pypi.python.org/pypi/histogram}{\textcolor{blue}{histogram}} & 2011 & conventional-HEP & numpy & matplotlib, HDF5 \\
+$\surd$ & \href{https://pypi.python.org/pypi/SimpleHist}{\textcolor{blue}{SimpleHist}} & 2011 & conventional-HEP & numpy, matplotlib & ROOT \\
+$\surd$ & \href{https://pypi.org/project/paida}{\textcolor{blue}{paida}} & 2007 & conventional-HEP & & \\
+& \href{https://github.com/theodoregoetz/histogram}{\textcolor{blue}{theodoregoetz}} & never & conventional-HEP & scipy, uncertainties & numpy, matplotlib \\
+% $\surd$ & \href{https://pypi.python.org/pypi/histogramy}{\textcolor{blue}{histogramy}} & 2013 & Numpy, Matplotlib, Scikit-Learn & & \\
+% $\surd$ & \href{https://pypi.python.org/pypi/pypeaks}{\textcolor{blue}{pypeaks}} & 2014 & & & \\
+% $\surd$ & \href{https://pypi.python.org/pypi/hierogram}{\textcolor{blue}{hierogram}} & 2014 & & & \\
+% $\surd$ & \href{https://pypi.python.org/pypi/histo}{\textcolor{blue}{histo}} & & & & \\
+% $\surd$ & \href{https://pypi.python.org/pypi/python-metrics}{\textcolor{blue}{python-metrics}} & & & & \\
+% $\surd$ & \href{https://pypi.python.org/pypi/statscounter}{\textcolor{blue}{statscounter}} & 2016 & & & \\
+% $\surd$ & \href{https://pypi.python.org/pypi/datagram}{\textcolor{blue}{datagram}} & & & & \\
+% & \href{http://www.ifh.de/~middell/dashi/index.html}{\textcolor{blue}{dashi}} & & & & \\
 \end{tabular}
+\end{columns}
+qhist
+fast-histogram
+
 \end{frame}
 
 
