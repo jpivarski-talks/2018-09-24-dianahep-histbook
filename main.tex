@@ -56,9 +56,55 @@
 
 % START START START START START START START START START START START START START
 
-\begin{frame}{First slide}
+\begin{frame}{Another histogram package?}
+\large
 \vspace{0.5 cm}
-HERE
+\begin{columns}
+\column{1.02\linewidth}
+Histograms are easy to implement, and they're so essential to HEP data analysis that it's worth optimizing the design and experimenting with new ones.
+
+\vspace{0.5 cm}
+\textcolor{darkblue}{Is there a downside to creating new histogram packages?}
+
+\vspace{0.2 cm}
+\begin{center}
+\uncover<2->{Interoperability?}
+\end{center}
+
+\vspace{0.2 cm}
+\uncover<3->{If Alice uses ROOT, Bob uses Yoda, Claire uses AIDA, and Donald uses Numpy, how are they going to collaborate on analysis?}
+\end{columns}
 \end{frame}
+
+\begin{frame}[fragile]{Interoperability doesn't have to be hard}
+\large
+\vspace{0.25 cm}
+As long as we're talking about a handful of standards, we can synchronize them.
+
+\begin{columns}
+\column{0.5\linewidth}
+\small
+\vspace{-0.5 cm}
+\begin{minted}{python}
+import uproot
+import numpy
+f = uproot.recreate("some.root")
+f["myhist"] = numpy.histogram(
+    numpy.random.normal(0, 1, 10000))
+
+
+import ROOT
+f = ROOT.TFile("some.root")
+h = f.Get("myhist")
+h.Draw()
+\end{minted}
+\column{0.4\linewidth}
+\hfill \includegraphics[width=\linewidth]{numpy-to-root.pdf}
+\end{columns}
+
+\large
+Pratyush Das's histogram-writing feature $+$ a straightforward Numpy translation.
+\end{frame}
+
 
 \end{document}
