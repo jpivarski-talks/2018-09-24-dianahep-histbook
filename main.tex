@@ -61,15 +61,18 @@
 \vspace{0.25 cm}
 \begin{columns}
 \column{1.1\linewidth}
-\begin{tabular}{c l c p{2.5 cm} p{1.5 cm} p{4.75 cm}}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{c l c p{2.7 cm} p{1.5 cm} p{4.75 cm}}
 pip? & name & last release & interface style & depends on & integrates with \\\hline
 & \href{https://root.cern.ch/pyroot}{\textcolor{blue}{PyROOT}} & 2018 & conventional-HEP & ROOT & numpy \\
 & \href{https://yoda.hepforge.org/pydoc}{\textcolor{blue}{YODA}} & 2018 & conventional-HEP & compiled & matplotlib, yaml \\
-$\surd$ & \href{https://pypi.python.org/pypi/physt}{\textcolor{blue}{physt}} & 2018 & data science + HEP & numpy & dask, matplotlib, folium, vega, xarray, protobuf, pandas \\
+$\surd$ & \href{https://pypi.python.org/pypi/physt}{\textcolor{blue}{physt}} & 2018 & data science + HEP & numpy & pandas, xarray, dask, protobuf, matplotlib, vega (plotting), folium (maps) \\
+$\surd$ & \href{https://pypi.org/project/fast-histogram}{\textcolor{blue}{fast-histogram}} & 2018 & simple (astronomy) & numpy & \\
+$\surd$ & \href{https://pypi.org/project/qhist/}{\textcolor{blue}{qhist}} & 2018 & conventional-HEP & ROOT & \\
 $\surd$ & \href{https://pypi.org/project/rootpy}{\textcolor{blue}{rootpy}} & 2017 & conventional-HEP & ROOT & pytables, matplotlib, stats \\
-$\surd$ & \href{https://vaex.io}{\textcolor{blue}{vaex}} & 2017 & big data GUI, fast heatmaps & many! & Jupyter, matplotlib, HDF5, pandas, C++ \\
-$\surd$ & \href{https://pypi.python.org/pypi/hdrhistogram}{\textcolor{blue}{hdrhistogram}} & 2017 & high dynamic range & compiled & Java, C++ \\
-$\surd$ & \href{https://pypi.python.org/pypi/multihist}{\textcolor{blue}{multihist}} & 2017 & numpy wrapper & numpy & Matplotlib \\
+$\surd$ & \href{https://vaex.io}{\textcolor{blue}{Vaex}} (vaex.io) & 2017 & all-in-one GUI for big data, fast heatmaps & many! & Jupyter, matplotlib, HDF5, pandas, C++ \\
+$\surd$ & \href{https://pypi.python.org/pypi/hdrhistogram}{\textcolor{blue}{hdrhistogram}} & 2017 & ``high dynamic range'' & compiled & Java, C++ \\
+$\surd$ & \href{https://pypi.python.org/pypi/multihist}{\textcolor{blue}{multihist}} & 2017 & numpy wrapper & numpy & matplotlib \\
 $\surd$ & \href{https://github.com/ibab/matplotlib-hep}{\textcolor{blue}{matplotlib-hep}} & 2016 & conventional-HEP & matplotlib & numpy, scipy \\
 $\surd$ & \href{https://pypi.python.org/pypi/pyhistogram}{\textcolor{blue}{pyhistogram}} & 2014 & conventional-HEP & numpy & matplotlib, datetime \\
 $\surd$ & \href{https://pypi.python.org/pypi/histogram}{\textcolor{blue}{histogram}} & 2011 & conventional-HEP & numpy & matplotlib, HDF5 \\
@@ -86,9 +89,6 @@ $\surd$ & \href{https://pypi.org/project/paida}{\textcolor{blue}{paida}} & 2007 
 % & \href{http://www.ifh.de/~middell/dashi/index.html}{\textcolor{blue}{dashi}} & & & & \\
 \end{tabular}
 \end{columns}
-qhist
-fast-histogram
-
 \end{frame}
 
 
